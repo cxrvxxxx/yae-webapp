@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="{% static 'yae/images/favicon.ico' %}" type="icon/x-image">
+    <link rel="stylesheet" href="{% static 'yae/css/style.css' %}">
+    {% if title %}
+        <title>{{ title }} - Yae Miko | Discord Bot </title>
+    {% else %}
+        <title>Yae Miko | Discord Bot</title>
+    {% endif %}
+</head>
+<body>
+    <div class="grid-container">
+        <nav class="navbar">
+            <img class="brand-icon" src="{% static 'yae/images/icon.png' %}" alt="">
+            <a class="navbar-button active" href="#">HOME</a>
+            <a class="navbar-button" href="#">DOCS</a>
+            <a class="navbar-button" href="#">GITHUB</a>
+        </nav>
+        <main class="content">
+            {% block content %}{% endblock content %}
+        </main>
+        <footer class="footer">
+            <small>Background Image by @nolc_00 &copy;</small>
+        </footer>
+    </div>
+</body>
+</html>
