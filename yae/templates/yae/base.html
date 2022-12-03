@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="{% static 'yae/images/favicon.ico' %}" type="icon/x-image">
     <link rel="stylesheet" href="{% static 'yae/css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria&display=swap" rel="stylesheet">
     {% if title %}
         <title>{{ title }} - Yae Miko | Discord Bot </title>
     {% else %}
@@ -15,9 +18,9 @@
 <body>
     <div class="grid-container">
         <nav class="navbar">
-            <img class="brand-icon" src="{% static 'yae/images/icon.png' %}" alt="">
-            <a class="navbar-button active" href="#">HOME</a>
-            <a class="navbar-button" href="#">DOCS</a>
+            <img class="brand-icon" src="{% static 'yae/images/brand.png' %}" alt="">
+            <a class="navbar-button active" href="{% url 'yae:home' %}">HOME</a>
+            <a class="navbar-button" href="{% url 'yae:docs' %}">DOCS</a>
             <a class="navbar-button" href="#">GITHUB</a>
         </nav>
         <main class="content">

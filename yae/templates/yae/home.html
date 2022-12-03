@@ -1,17 +1,20 @@
 {% extends "yae/base.html" %}
+{% load static %}
 {% block content %}
-<div class="desc">
-    <h1 class="heading">Yae Miko &mdash; A bot for all your Discord server's needs!</h1>
-    <p class="text">Invite Yae Miko to your Discord server and enjoy all features, for free!<br>
-    <ul>
-        <li>Server Management</li>
-        <li>Music & Entertainment</li>
-        <li>News & Updates</li>
-    </ul>
-    ...and so much more!</p>
+<div class="heading">
+    <h1>Yae Miko &mdash; A bot for all your Discord server's needs!</h1>
 </div>
-<div class="links">
-    <a class="button-light" href="">INVITE YAE MIKO</a>
-    <a class="button-dark" href="">COPY INVITE LINK</a>
+<div class="description">
+    <img src="{% static 'yae/images/icon2.png' %}" alt="" width="200px">
+    <p class="text">Comes feature-packed and is capable of a multitude of tasks such as server management, moderation, react-roles, economy, music & entertainment, security features, and so much more! <br><br> Now supports slash commands!</p>
+</div>
+<div class="description">
+    <img src="https://imgs.search.brave.com/GGfNfe5rxJ8QWEoxXniSLc0-POLU3qPyTIpuqPdbmXk/rs:fit:200:200:1/g:ce/aHR0cHM6Ly93d3cu/cHl0aG9uLm9yZy9z/dGF0aWMvb3Blbmdy/YXBoLWljb24tMjAw/eDIwMC5wbmc" alt="">
+    <p class="text">Built using Python & discord.py <br><br><b>Asynchronus</b> - Fast and responsive!<br><b>Well maintained</b> - Bug fixes and constant updates! </p>
+</div>
+<div class="invite">
+    <h4>Invite link</h6>
+    <input class="invite-link" type="text" value="https://discord.com/api/oauth2/authorize?client_id=904245816552742922&permissions=1789390220887&scope=bot%20applications.commands" readonly>
+    <button class="button" href="">COPY INVITE LINK</a>
 </div>
 {% endblock content %}
