@@ -1,28 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria&display=swap');
+
+:root {
+    --nav-height: 50px;
+    --footer-height: 20px;
+}
+
 body {
     background-image: linear-gradient(
-                            to right,
-                            rgba(0, 0, 0, 0.932),
-                            rgba(251, 250, 255, 0)
+                            to bottom right,
+                            rgba(226, 117, 137, 0.932),
+                            rgb(249, 205, 212, 0)
                         ),
-                      url("../images/bgimage.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% auto;
+                      url("../images/tile.png");
+    background-repeat: repeat;
+    /* background-size: 100% auto; */
     background-color: #9667e0;
     color: 	#fbfaff;
-    font-family: 'Trebuchet MS', Arial, sans-serif;
+    font-family: 'Alexandria', 'Trebuchet MS', sans-serif;
     overflow: hidden;
     margin: 0;
 }
 
 .grid-container {
-    width: 100vw;
     height: 100vh;
     display: grid;
-    grid-template-rows: 64px auto 20px;
+    grid-template:
+        "nav    " var(--nav-height)
+        "content" auto
+        "footer " var(--footer-height) /
+         auto;
 }
 
 .navbar {
-    background-color: rgba(150, 103, 224, 0.64);
+    background-color: #242F36;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12),
                 0 2px 2px rgba(0, 0, 0, 0.12),
                 0 4px 4px rgba(0, 0, 0, 0.12);
@@ -32,40 +42,31 @@ body {
     overflow: visible;
     top: 0;
     left: 0;
-    height: 64px;
+    height: 100%;
     display: grid;
-    grid-template-columns: 80px 100px 100px 100px;
+    grid-template-columns: 120px 100px 100px 100px;
     align-items: center;
 }
 
 .brand-icon {
-    background-color: rgba(54, 57, 62, 0.8);
-    outline: 2px solid #fbfaff;
-    outline-offset: 2px;
-    border-radius: 50%;
-    height: auto;
-    width: 50px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12),
-                 0 2px 2px rgba(0, 0, 0, 0.12),
-                 0 4px 4px rgba(0, 0, 0, 0.12),
-                 0 8px 8px rgba(0, 0, 0, 0.12),
-                 0 16px 16px rgba(0, 0, 0, 0.12);
+    border-radius: 0;
+    padding: none;
+    margin: none;
+    height: 48px;
+    width: auto;
 }
 
 .navbar-button {
     border: thin solid rgba(251, 250, 255, 0);
     border-radius: 10px;
     color: #e5e4e7;
-    font-size: 16px;
-    letter-spacing: 2px;
+    font-size: 14px;
     text-decoration: none;
     text-align: center;
     padding: 5px 10px 5px 10px;
 }
 
 .navbar-button:hover {
-    /* border: thin solid rgba(251, 250, 255, 1); */
-    background-color: #503a74;
     color: 	#fbfaff;
     font-weight: bolder;
 }
@@ -84,24 +85,72 @@ body {
 .content {
     background-color:  rgba(150, 103, 224, 0.4);
     color: #fbfaff;
-    height: 100%;
-    padding: 50px 50px 50px 50px;
+    padding: 50px 20% 50px 20%;
+    overflow-x: scroll;
 }
 
 .heading{
+    font-weight: bold;
     font-style: italic;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.12),
+                 0 2px 2px rgba(0, 0, 0, 0.12),
+                 0 4px 4px rgba(0, 0, 0, 0.12),
+                 0 8px 8px rgba(0, 0, 0, 0.12);
+    text-align: center;
 }
 
-
-.desc {
-    padding-top: 10%;
-    padding-left: 5%;
+.description {
+    padding: 15px;
+    background-color: rgba(36, 47, 54, 0.7);
+    border-radius: 10px;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.12),
                  0 2px 2px rgba(0, 0, 0, 0.12),
                  0 4px 4px rgba(0, 0, 0, 0.12),
                  0 8px 8px rgba(0, 0, 0, 0.12),
                  0 16px 16px rgba(0, 0, 0, 0.12);
-    width: 50%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12),
+                0 2px 2px rgba(0, 0, 0, 0.12),
+                0 4px 4px rgba(0, 0, 0, 0.12),
+                0 8px 8px rgba(0, 0, 0, 0.12),
+                0 16px 16px rgba(0, 0, 0, 0.12);
+    font-weight: lighter;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: grid;
+    grid-template-columns: 200px auto;
+}
+    
+.description img {
+    background-color: rgba(36, 47, 54, 0.75);
+    border-radius: 10px;
+    justify-self: center;
+}
+
+.description p {
+    padding: 2%;
+}
+
+.invite {
+    background-color: rgba(36, 47, 54, 0.7);
+    padding: 2%;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 10% auto 20%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12),
+                 0 2px 2px rgba(0, 0, 0, 0.12),
+                 0 4px 4px rgba(0, 0, 0, 0.12),
+                 0 8px 8px rgba(0, 0, 0, 0.12),
+                 0 16px 16px rgba(0, 0, 0, 0.12);
+    align-items: center;
+}
+
+.invite-link {
+    border-radius: 5px;
+    border: none;
+    font-family: 'Alexandria', 'Trebuchet MS', sans-serif;
+    background-color: rgba(36, 47, 54, 0.75);
+    color: #fbfaff;
+    padding: 1%;
 }
 
 .links {
@@ -122,10 +171,25 @@ body {
     margin-left: 1.5vw;
 }
 
-.links .button-light {
-    background-color:#fbfaff;
-    outline: 2px solid #fbfaff;
-    color: #503a74;
+.button {
+    width: 180px;
+    background-color: rgba(226, 117, 137, 0.3);
+    border: thin solid rgb(0, 0, 0);
+    border: none;
+    color: #fbfaff;
+    align-self: center;
+    justify-self: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: rgba(226, 117, 137, 0.7);
+}
+
+h4 {
+    padding: 0;
+    margin: 0;
 }
 
 .links .button-dark {
@@ -141,14 +205,29 @@ body {
 }
 
 .footer {
-    background-color: #9667e0;
+    background-color: #242F36;
     color: #fbfaff;
-    border-top: thin solid #494949;
-    bottom: 0;
-    margin: 0;
-    padding: 0% 2% 0% 2%;
-    position: fixed;
+    height: 20px;
     width: 100%;
     font-style: italic;
     height: 20px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+::-webkit-scrollbar-track {
+background: rgba(241, 241, 241, 0.3);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: rgb(74, 97, 110);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #242F36;
 }
