@@ -1,20 +1,55 @@
 {% extends "yae/base.html" %}
 {% load static %}
 {% block content %}
-<div class="heading">
-    <h1>Yae Miko &mdash; A bot for all your Discord server's needs!</h1>
+<div class="content container mt-5 py-5">
+    <div class="row text-center">
+        <h1 class="heading" >Yae Miko &mdash; A bot for all your Discord server's needs!</h1>
+    </div>
+    <div class="row d-flex">
+        <div class="col-md">
+            <div class="row justify-content-evenly">
+                <div class="infocard card mt-5" style="width: 18rem;">
+                    <img class="infocard-img card-img-top" src="{% static 'yae/images/icon2.png' %}" alt="YaeMiko logo" height="240">
+                    <div class="card-body">
+                      <p class="card-text">Comes feature-packed and is capable of a multitude of tasks such as server management, moderation, react-roles, economy, music & entertainment, security features, and so much more! <br><br> Now supports slash commands!</p>
+                    </div>
+                </div>
+                <div class="infocard card mt-5" style="width: 18rem;">
+                    <img class="infocard-img card-img-top" src="https://imgs.search.brave.com/GGfNfe5rxJ8QWEoxXniSLc0-POLU3qPyTIpuqPdbmXk/rs:fit:200:200:1/g:ce/aHR0cHM6Ly93d3cu/cHl0aG9uLm9yZy9z/dGF0aWMvb3Blbmdy/YXBoLWljb24tMjAw/eDIwMC5wbmc" alt="Python logo" height="240">
+                    <div class="card-body">
+                      <p class="card-text">Built using Python & discord.py <br><br>Asynchronus &mdash; Fast and responsive.<br>Well maintained &mdash; Bug fixes and constant updates.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="infocard card row mt-5">
+                <h4>Login</h4>
+                <form>
+                    <div class="form-group">
+                      <label for="emailField">Email address</label>
+                      <input type="email" class="form-control" id="emailField" aria-describedby="emailHelp" placeholder="Enter email">
+                      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <button type="submit" class="button">Submit</button>
+                  </form>
+            </div>
+            <div class="invite infocard card row mt-5">   
+                <h6 class="text-center" >Add Yae Miko to your server using this link</h6>
+                <input id="inviteLinkField" class="invite-link mt-2" type="text" value="https://discord.com/api/oauth2/authorize?client_id=904245816552742922&permissions=1789390220887&scope=bot%20applications.commands" readonly>
+                <input id="copyLinkBtn" type="button" class="button mt-2" onclick="copyLink()" value="COPY INVITE LINK" >
+                <!-- <button class="button mt-2" onclick="copyLink()">COPY INVITE LINK</button> -->
+            </div>
+        </div>
+    </div>
 </div>
-<div class="description">
-    <img src="{% static 'yae/images/icon2.png' %}" alt="" width="200px">
-    <p class="text">Comes feature-packed and is capable of a multitude of tasks such as server management, moderation, react-roles, economy, music & entertainment, security features, and so much more! <br><br> Now supports slash commands!</p>
-</div>
-<div class="description">
-    <img src="https://imgs.search.brave.com/GGfNfe5rxJ8QWEoxXniSLc0-POLU3qPyTIpuqPdbmXk/rs:fit:200:200:1/g:ce/aHR0cHM6Ly93d3cu/cHl0aG9uLm9yZy9z/dGF0aWMvb3Blbmdy/YXBoLWljb24tMjAw/eDIwMC5wbmc" alt="">
-    <p class="text">Built using Python & discord.py <br><br><b>Asynchronus</b> - Fast and responsive!<br><b>Well maintained</b> - Bug fixes and constant updates! </p>
-</div>
-<div class="invite">
-    <h4>Invite link</h6>
-    <input class="invite-link" type="text" value="https://discord.com/api/oauth2/authorize?client_id=904245816552742922&permissions=1789390220887&scope=bot%20applications.commands" readonly>
-    <button class="button" href="">COPY INVITE LINK</a>
-</div>
+<script src="{% static 'yae/js/home.js' %}"></script>
 {% endblock content %}
