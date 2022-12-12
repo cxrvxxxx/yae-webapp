@@ -8,10 +8,12 @@
         </div>
         <div class="docs-entry col-md-9 p-3">
             <h6 class="docs-subsection">Yae Miko &mdash; Discord Bot</h6>
-            <span class="docs-subtext">Yae Miko is a Discord Bot built using Python & Discord.py library. It includes a multitude of features allowing you to manage your server using commands from the chat box as well as security functionality that protects your server from unwanted spams, trolls, and many other security risks making your server a safer place for its members.</span><br><br>
+            <span class="docs-subtext">Yae Miko is a Discord Bot built using Python & Discord.py library. It includes a multitude of features allowing you to manage your server using commands from the chat box as well as security functionality that protects your server from unwanted spams, trolls, and many other security risks making your server a safer place for its members.</span>
+            <hr>
             <h6 class="docs-subsection">Adding Yae Miko to your Discord server</h6>
             <span class="docs-subtext">To start using Yae Miko, you can add the bot to your server by using the invite link below <br>
-                <code>https://discord.com/api/oauth2/authorize?client_id=904245816552742922&permissions=1789390220887&scope=bot%20applications.commands</code><br>Copy the link above and paste it to your browser
+                <input class="codeblock" type="text" value="https://discord.com/api/oauth2/authorize?client_id=904245816552742922&permissions=1789390220887&scope=bot%20applications.commands" readonly>
+                Copy the link above and paste it to your browser
             </span><br><br>
         </div>
     </div>
@@ -21,12 +23,12 @@
         </div>
         <div class="docs-entry col-md-9 p-3">
             <h6 class="docs-subsection">Using Yae Miko</h6>
-            <span class="docs-subtext">Yae Miko can receive commands from any text channels it has access to. To send a command, the default prefix is "y!" but it can be changed to any prefix of your preference later using a command. The format for text-based commands are as follows <br>
-            <code>
-                PrefixCommand Argument(s) <br>
-                Example: <br>
-                y!echo Hello!</code><br>
-            Where "y!" is the prefix, "echo" is the command, and "Hello!" is the argument.</span> <br><br>
+            <span class="docs-subtext">Yae Miko can receive commands from any text channels it has access to. To send a command, the default prefix is "y!" but it can be changed to any prefix of your preference later using a command. The format for text-based commands are as follows</span>
+            <input class="codeblock" type="text" value="<prefix><command> <args>" readonly>
+            <br>
+            <span>Example:</span>
+            <input class="codeblock" type="text" value="y!echo Hello!" readonly><br>
+            <span class="docs-subtext">Where "y!" is the prefix, "echo" is the command, and "Hello!" is the argument.</span> <br><br>
         </div>
     </div>
     <div class="row mt-1">
@@ -69,7 +71,8 @@
                     <td>echo message</td>
                     <td>Makes the bot repeat the message.</td>
                 </tr>
-            </table> <br><br>
+            </table>
+            <hr>
             <h6 class="docs-subsection">Info Module</h6>
             <span class="docs-subtext">This module contains commands that displays information about other modules such as subcommands and usage specifications.</span> <br> <br>
             <table class="table w-100">
@@ -101,9 +104,11 @@
                     <td>slash</td>
                     <td>Shows information about the Slash Commands Module.</td>
                 </tr>
-            </table> <br> <br>
+            </table>
+            <hr>
             <h6 class="docs-subsection">Anti-spam Module</h6>
-            <span class="docs-subtext">This module prevents spam. Currently there are no commands present in this module and operates by listening to message events in the server.</span><br><br>
+            <span class="docs-subtext">This module prevents spam. Currently there are no commands present in this module and operates by listening to message events in the server.</span>
+            <hr>
             <h6 class="docs-subsection">MusicPlayer Mdodule</h6>
             <span class="docs-subtext">This module contains commands related to playing music in voice channels in the server. (Will be deprecated soon, replaced by slash commands.</span> <br><br>
             <table class="table w-100">
@@ -159,7 +164,8 @@
                     <td>playliked optional:index</td>
                     <td>Add your list of favorite songs to the queue. If an index is specified, only add that instead.</td>
                 </tr>
-            </table><br><br>
+            </table>
+            <hr>
             <h6 class="docs-subsection">Slash Commands Module</h6>
             <span class="docs-subtext">This module contains a list of application commands. These commands do not use the standard prefix syntax and instead use "/" as a prefix.</span><br><br>
             <table class="table w-100">
@@ -171,7 +177,8 @@
                     <td>whois @user</td>
                     <td>Shows information about the mentioned user.</td>
                 </tr>
-            </table><br><br>
+            </table>
+            <hr>
             <h6 class="docs-subsection">Extras Module</h6>
             <span class="docs-subtext">This module contains commands that do not classify in any of the categories above.</span><br><br>
             <table class="table w-100">
