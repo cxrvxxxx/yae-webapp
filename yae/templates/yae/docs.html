@@ -1,9 +1,190 @@
 {% extends "yae/base.html" %}
+{% load static %}
 {% block content %}
-<div class="panel-lh">
-    Sample text
-</div>
-<div class="panel-main">
-    Sample text
+<div class="docs-content container mt-5 py-5">
+    <div class="row mt-1">
+        <div class="docs-navi col-md-3 text-center py-3">
+            <h5 class="docs-section">Getting started</h5>
+        </div>
+        <div class="docs-entry col-md-9 p-3">
+            <h6 class="docs-subsection">Yae Miko &mdash; Discord Bot</h6>
+            <span class="docs-subtext">Yae Miko is a Discord Bot built using Python & Discord.py library. It includes a multitude of features allowing you to manage your server using commands from the chat box as well as security functionality that protects your server from unwanted spams, trolls, and many other security risks making your server a safer place for its members.</span><br><br>
+            <h6 class="docs-subsection">Adding Yae Miko to your Discord server</h6>
+            <span class="docs-subtext">To start using Yae Miko, you can add the bot to your server by using the invite link below <br>
+                <code>https://discord.com/api/oauth2/authorize?client_id=904245816552742922&permissions=1789390220887&scope=bot%20applications.commands</code><br>Copy the link above and paste it to your browser
+            </span><br><br>
+        </div>
+    </div>
+    <div class="row mt-1">
+        <div class="docs-navi col-md-3 text-center py-3">
+            <h5 class="docs-section">Usage instructions</h5>
+        </div>
+        <div class="docs-entry col-md-9 p-3">
+            <h6 class="docs-subsection">Using Yae Miko</h6>
+            <span class="docs-subtext">Yae Miko can receive commands from any text channels it has access to. To send a command, the default prefix is "y!" but it can be changed to any prefix of your preference later using a command. The format for text-based commands are as follows <br>
+            <code>
+                PrefixCommand Argument(s) <br>
+                Example: <br>
+                y!echo Hello!</code><br>
+            Where "y!" is the prefix, "echo" is the command, and "Hello!" is the argument.</span> <br><br>
+        </div>
+    </div>
+    <div class="row mt-1">
+        <div class="docs-navi col-md-3 text-center py-3">
+            <h5 class="docs-section">Modules</h5>
+        </div>
+        <div class="docs-entry col-md-9 p-3">
+            <h6 class="docs-subsection">Admin Module</h6>
+            <span class="docs-subtext">This module contains commands that allows you to manage the operation of the bot. These commands require elevated permissions by default.</span> <br> <br>
+            <table class="table w-100">
+                <tr>
+                    <th class="col-md-3">Command</th>
+                    <th class="col-md-9">Description</th>
+                </tr>
+                <tr>
+                    <td>setprefix prefix</td>
+                    <td>Set the prefix for the current server to the one specified.</td>
+                </tr>
+                <tr>
+                    <td>yaechannel</td>
+                    <td>Set the current channel in the current server to be used only for Yae Miko commands. Invalid commands and regular chat will automatically be deleted.</td>
+                </tr>
+                <tr>
+                    <td>setaccess @user 0-5</td>
+                    <td>Set the mentioned user's access level to the one specified. This allows access to certain commands that require elevated permissions.</td>
+                </tr>
+                <tr>
+                    <td>sudo</td>
+                    <td>Gives the user the highest access level available.</td>
+                </tr>
+                <tr>
+                    <td>restart</td>
+                    <td>Restars the bot. Restricted to the bot owner only.</td>
+                </tr>
+                <tr>
+                    <td>sync optional: -c/-g</td>
+                    <td>Sync application commands. Use with "-c" to clear, "-g" to sync globally, or none to sync locally.</td>
+                </tr>
+                <tr>
+                    <td>echo message</td>
+                    <td>Makes the bot repeat the message.</td>
+                </tr>
+            </table> <br><br>
+            <h6 class="docs-subsection">Info Module</h6>
+            <span class="docs-subtext">This module contains commands that displays information about other modules such as subcommands and usage specifications.</span> <br> <br>
+            <table class="table w-100">
+                <tr>
+                    <th class="col-md-3">Command</th>
+                    <th class="col-md-9">Description</th>
+                </tr>
+                <tr>
+                    <td>info</td>
+                    <td>Shows information about Yae Miko.</td>
+                </tr>
+                <tr>
+                    <td>admin</td>
+                    <td>Shows information about the Admin Module.</td>
+                </tr>
+                <tr>
+                    <td>spam</td>
+                    <td>Shows information about the Anti-spam Module.</td>
+                </tr>
+                <tr>
+                    <td>music</td>
+                    <td>Shows information about the MusicPlayer Module.</td>
+                </tr>
+                <tr>
+                    <td>extras</td>
+                    <td>Shows information about the Extras Module.</td>
+                </tr>
+                <tr>
+                    <td>slash</td>
+                    <td>Shows information about the Slash Commands Module.</td>
+                </tr>
+            </table> <br> <br>
+            <h6 class="docs-subsection">Anti-spam Module</h6>
+            <span class="docs-subtext">This module prevents spam. Currently there are no commands present in this module and operates by listening to message events in the server.</span><br><br>
+            <h6 class="docs-subsection">MusicPlayer Mdodule</h6>
+            <span class="docs-subtext">This module contains commands related to playing music in voice channels in the server. (Will be deprecated soon, replaced by slash commands.</span> <br><br>
+            <table class="table w-100">
+                <tr>
+                    <th class="col-md-3">Command</th>
+                    <th class="col-md-9">Description</th>
+                </tr>
+                <tr>
+                    <td>join</td>
+                    <td>Makes the bot join the user's current voice channel.</td>
+                </tr>
+                <tr>
+                    <td>leave</td>
+                    <td>Makes the bot leave the voice channel.</td>
+                </tr>
+                <tr>
+                    <td>play title/url</td>
+                    <td>Play the specified song/url in the voice channel.</td>
+                </tr>
+                <tr>
+                    <td>stop</td>
+                    <td>Stop playback in the current channel and clears the queue.</td>
+                </tr>
+                <tr>
+                    <td>pause</td>
+                    <td>Pause playback in the current channel.</td>
+                </tr>
+                <tr>
+                    <td>resume</td>
+                    <td>Resume playback in the current channel.</td>
+                </tr>
+                <tr>
+                    <td>skip</td>
+                    <td>Play the next song in the queue.</td>
+                </tr>
+                <tr>
+                    <td>prev</td>
+                    <td>Play the previously played song.</td>
+                </tr>
+                <tr>
+                    <td>vol</td>
+                    <td>Set the player's volume.</td>
+                </tr>
+                <tr>
+                    <td>fave optional:title</td>
+                    <td>Add the currently playing song to your list of favorites. If a title is specified, add that instead.</td>
+                </tr>
+                <tr>
+                    <td>unfave index</td>
+                    <td>Removes the song specified with the idnex argument from your list of favorites.</td>
+                </tr>
+                <tr>
+                    <td>playliked optional:index</td>
+                    <td>Add your list of favorite songs to the queue. If an index is specified, only add that instead.</td>
+                </tr>
+            </table><br><br>
+            <h6 class="docs-subsection">Slash Commands Module</h6>
+            <span class="docs-subtext">This module contains a list of application commands. These commands do not use the standard prefix syntax and instead use "/" as a prefix.</span><br><br>
+            <table class="table w-100">
+                <tr>
+                    <th class="col-md-3">Command</th>
+                    <th class="col-md-9">Description</th>
+                </tr>
+                <tr>
+                    <td>whois @user</td>
+                    <td>Shows information about the mentioned user.</td>
+                </tr>
+            </table><br><br>
+            <h6 class="docs-subsection">Extras Module</h6>
+            <span class="docs-subtext">This module contains commands that do not classify in any of the categories above.</span><br><br>
+            <table class="table w-100">
+                <tr>
+                    <th class="col-md-3">Command</th>
+                    <th class="col-md-9">Description</th>
+                </tr>
+                <tr>
+                    <td>coinflip</td>
+                    <td>Flip a coin</td>
+                </tr>
+            </table><br><br>
+        </div>
+    </div>
 </div>
 {% endblock content %}
