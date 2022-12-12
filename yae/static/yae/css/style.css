@@ -5,6 +5,10 @@
     --footer-height: 20px;
 }
 
+/* * {
+    outline: 1px solid #f00 !important;
+  } */
+
 body {
     background-image: linear-gradient(
                             to bottom right,
@@ -16,11 +20,20 @@ body {
     background-color: #9667e0;
     color: #fbfaff;
     font-family: 'Alexandria', 'Trebuchet MS', sans-serif;
-    width: 100vw;
-    height: 100vh;
 }
 
+.nav-link {
+    color: hsl(255, 0%, 80%) !important;
+}
+
+.nav-link:hover {
+    color: hsl(255, 100%, 100%) !important;
+}
+
+
 .navigation {
+    color: #fbfaff !important;
+    font-family: 'Alexandria', 'Trebuchet MS', sans-serif;
     background-color: #242F36;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12),
                 0 2px 2px rgba(0, 0, 0, 0.12),
@@ -122,6 +135,20 @@ body {
                 0 16px 16px rgba(0, 0, 0, 0.12);
 }
 
+.codeblock {
+    background-color: rgba(36, 47, 54, 0.75);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    color: #ff1493;
+    border: thin solid rgba(229, 228, 231, 0.2);
+    border-radius: 5px;
+    display: block;
+    padding: 5px 2px 5px 2px;
+    overflow-x: scroll;
+    white-space: nowrap;
+    width: 100%;
+}
+
 table {
     background-color: rgba(226, 117, 137, 0.4);
     color: #e5e4e7 !important;
@@ -132,12 +159,30 @@ table {
     border-color: black !important;
 }
 
+tr:not(:first-child) > td:first-child {
+    background-color: rgba(226, 117, 137, 0.2) !important;
+}
+
 tr:first-child {
     background-color: rgba(36, 47, 54, 0.3);
 }
 
 tr:hover:not(:first-child){
     background-color: rgba(36, 47, 54, 0.3);
+}
+
+footer {
+    background-color: #242F36;
+    color: #e5e4e7;
+    font-style: italic;
+    position: fixed;
+    padding-left: 50px;
+    bottom: 0;
+    left: 0;
+    height: 20px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 ::-webkit-scrollbar {
