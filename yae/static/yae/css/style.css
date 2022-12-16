@@ -10,12 +10,17 @@
   } */
 
 body {
-    background-image: linear-gradient(
+    background-image: linear-gradient(rgba(150, 103, 224, 0.4), rgba(150, 103, 224, 0.4)),
+                      url('../images/bgimage.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    /* background-image: linear-gradient(
                             to bottom right,
                             rgba(226, 117, 137, 0.932),
                             rgb(249, 205, 212, 0)
                         ),
-                      url("../images/tile.png");
+                      url("../images/tile.png"); */
     background-repeat: repeat;
     background-color: #9667e0;
     color: #fbfaff;
@@ -100,6 +105,15 @@ body {
     border-radius: 5px;
 }
 
+.button-secondary {
+    background-color: rgba(226, 117, 137, 0);
+    color: #fbfaff;
+    outline: thin solid rgba(226, 117, 137, 0.3);
+    outline-offset: -1px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+}
+
 .button:hover {
     background-color: rgba(226, 117, 137, 0.7);
 }
@@ -177,12 +191,30 @@ footer {
     font-style: italic;
     position: fixed;
     padding-left: 50px;
+    padding-bottom: 2px;
     bottom: 0;
     left: 0;
-    height: 20px;
+    height: 22px;
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
+}
+
+.signup {
+    font-family: 'Alexandria', 'Trebuchet MS', sans-serif;
+    color: #e5e4e7;
+    padding: 15px;
+    background-color: rgba(36, 47, 54, 0.7) !important;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.12),
+                 0 2px 2px rgba(0, 0, 0, 0.12),
+                 0 4px 4px rgba(0, 0, 0, 0.12),
+                 0 8px 8px rgba(0, 0, 0, 0.12),
+                 0 16px 16px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12),
+                0 2px 2px rgba(0, 0, 0, 0.12),
+                0 4px 4px rgba(0, 0, 0, 0.12),
+                0 8px 8px rgba(0, 0, 0, 0.12),
+                0 16px 16px rgba(0, 0, 0, 0.12);
 }
 
 ::-webkit-scrollbar {

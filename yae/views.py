@@ -6,3 +6,9 @@ def home(request):
 
 def docs(request):
     return render(request, 'yae/docs.html', { 'title': 'Documentation' })
+
+def dash(request):
+    return render(request, 'yae/dash.html', { 'title': 'Dashboard'})
+
+def signup(request):
+    return render(request, 'yae/signup.html', { 'title': 'Register'})
