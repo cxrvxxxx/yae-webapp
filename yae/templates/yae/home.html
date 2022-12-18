@@ -23,8 +23,10 @@
               <input type="checkbox" class="form-check-input" id="exampleCheck1">
               <label class="form-check-label" for="exampleCheck1">Remember password?</label>
             </div>
-            <button type="submit" class="button">Login</button>
-            <button form="register" type="submit" class="button button-secondary">Register</button>
+            <div class="btn-container row pt-4 justify-content-between">
+              <button form="register" type="submit" class="button button-secondary col-md-3">Register</button>
+              <button type="submit" class="button col-md-3">Login</button>
+            </div>
           </form>
           <form id="register" action="{% url 'yae:register' %}" method="get">
           </form>

@@ -35,6 +35,10 @@ body {
     color: hsl(255, 100%, 100%) !important;
 }
 
+.nav-link.active {
+    color: hsl(255, 100%, 100%) !important;
+}
+
 
 .navigation {
     color: #fbfaff !important;
