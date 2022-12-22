@@ -25,6 +25,7 @@ body {
     background-color: #9667e0;
     color: #fbfaff;
     font-family: 'Alexandria', 'Trebuchet MS', sans-serif;
+    height: 100%;
 }
 
 .nav-link {
@@ -82,6 +83,28 @@ body {
     background-color: rgba(36, 47, 54, 0.75);
     border-radius: 10px;
 }
+
+.form-control {
+    background-color: rgba(36, 47, 54, 0.75) !important;
+    border: none !important;
+    border-bottom: thin solid rgba(226, 117, 137, 1) !important;
+    border-radius: 5px 5px 0 0 !important;
+    font-weight: lighter;
+    color: #fbfaff !important;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgba(251, 250, 255, 0.8) !important;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgba(251, 250, 255, 0.8) !important;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: rgba(251, 250, 255, 0.8) !important;
+  }
 
 .invite {
     background-color: rgba(36, 47, 54, 0.7);
